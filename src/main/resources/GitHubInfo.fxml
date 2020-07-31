@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="loggerTab" prefHeight="444.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.github.bjdavies1.githubgistclient.controllers.GitHubInfoController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <children>
+        <GridPane alignment="center" hgap="10" minWidth="500" vgap="10" xmlns:fx="http://javafx.com/fxml">
+            <Label fx:id="UserNameInfoLabel" text="GitHub UserName" GridPane.columnIndex="0"
+                   GridPane.rowIndex="0" />
+            <TextField fx:id="UserNameArea" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button GridPane.rowIndex="0" GridPane.columnIndex="2" fx:id="GetInfoButton"
+                    text="Get info on user" onAction="#getInfo"/>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Label fx:id="NameLabel" GridPane.rowIndex="0" GridPane.columnIndex="0" text="Name:"/>
+                <Label fx:id="NameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Label fx:id="RepositoriesLabel" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                       text="Public Repositories:"/>
+                <Label fx:id="PublicRepositoriesField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            </GridPane>
+        </GridPane>
+    </children>
+</VBox>
