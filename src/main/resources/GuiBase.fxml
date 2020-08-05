@@ -14,12 +14,12 @@
             <tabs>
                 <Tab text="GitHub User Info">
                     <content>
-<!--                        <fx:include fx:id="UserInfo" source="GitHubInfo.fxml" />-->
+                        <fx:include fx:id="UserInfo" source="GitHubInfo.fxml" />
                     </content>
                 </Tab>
                 <Tab text="User Repo Info">
                     <content>
-<!--                        <fx:include fx:id="Repos" source="RepoInfo.fxml" />-->
+                        <fx:include fx:id="Repos" source="RepoInfo.fxml" />
                     </content></Tab>
             </tabs>
         </TabPane>

@@ -12,11 +12,14 @@
     </padding>
     <children>
         <GridPane alignment="center" hgap="10" minWidth="500" vgap="10" xmlns:fx="http://javafx.com/fxml">
-            <Label fx:id="UserNameInfoLabel" text="GitHub UserName" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label fx:id="UserNameInfoLabel" text="GitHub UserName" GridPane.columnIndex="0"
+                   GridPane.rowIndex="0" />
             <TextField fx:id="UserNameArea" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
-
-            </GridPane>
+            <TextArea fx:id="RepoArea" GridPane.columnIndex="1" GridPane.rowIndex="1" editable="false"/>
+            <Button fx:id="UsePreviousNameButton" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                    text="Use UserName from other tab"/>
+            <Button fx:id="UseEnteredNameButton" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                    text="Use UserName you just entered"/>
         </GridPane>
     </children>
 </VBox>
