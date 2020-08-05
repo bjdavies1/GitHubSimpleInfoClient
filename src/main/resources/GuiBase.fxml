@@ -23,11 +23,11 @@
         <GridPane GridPane.rowIndex="0" GridPane.columnIndex="1">
             <Label fx:id="UserNameInfoLabel" text="GitHub UserName" GridPane.columnIndex="0"
                    GridPane.rowIndex="0" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="userName"/>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="userNameArea"/>
             <Button fx:id="userInfo" GridPane.rowIndex="1" GridPane.columnIndex="1"
-                    text="Get user info"/>
+                    text="Get user info" onAction="#getUserInfo"/>
             <Button fx:id="repos" text="Get pubic repos" GridPane.columnIndex="1"
-                    GridPane.rowIndex="2"/>
+                    GridPane.rowIndex="2" onAction="#getPublicRepos"/>
         </GridPane>
         <TextArea GridPane.columnIndex="2" GridPane.rowIndex="1" fx:id="repoArea" editable="false"
         prefHeight="300" />
