@@ -1,6 +1,6 @@
 package com.github.bjdavies1.githubgistclient.controllers;
 
-import com.github.bjdavies1.githubgistclient.caller.GithubUser;
+import com.github.bjdavies1.githubgistclient.models.GithubUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

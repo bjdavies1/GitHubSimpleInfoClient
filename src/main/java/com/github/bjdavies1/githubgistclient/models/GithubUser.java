@@ -1,4 +1,4 @@
-package com.github.bjdavies1.githubgistclient.caller;
+package com.github.bjdavies1.githubgistclient.models;
 
 public class GithubUser {
     private String name;

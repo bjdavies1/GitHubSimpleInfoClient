@@ -3,25 +3,50 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="900.0"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.github.bjdavies1.githubgistclient.controllers.MainController">
-    <children>
-        <TabPane layoutX="127.0" layoutY="90.0" prefHeight="400.0" prefWidth="600.0"
-                 tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                 AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <tabs>
-                <Tab text="GitHub User Info">
-                    <content>
-                        <fx:include fx:id="UserInfo" source="GitHubInfo.fxml" />
-                    </content>
-                </Tab>
-                <Tab text="User Repo Info">
-                    <content>
-                        <fx:include fx:id="Repos" source="RepoInfo.fxml" />
-                    </content></Tab>
-            </tabs>
-        </TabPane>
-    </children>
+    <GridPane alignment="center">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <GridPane GridPane.rowIndex="1" GridPane.columnIndex="0">
+            <Label fx:id="NameLabel" GridPane.rowIndex="0" GridPane.columnIndex="0" text="Name:"/>
+            <Label fx:id="NameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label fx:id="RepositoriesLabel" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                   text="Public Repositories:"/>
+            <Label fx:id="PublicRepositoriesField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        </GridPane>
+
+        <GridPane GridPane.rowIndex="0" GridPane.columnIndex="1">
+            <Label fx:id="UserNameInfoLabel" text="GitHub UserName" GridPane.columnIndex="0"
+                   GridPane.rowIndex="0" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="userName"/>
+            <Button fx:id="userInfo" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                    text="Get user info"/>
+            <Button fx:id="repos" text="Get pubic repos" GridPane.columnIndex="1"
+                    GridPane.rowIndex="2"/>
+        </GridPane>
+        <TextArea GridPane.columnIndex="2" GridPane.rowIndex="1" fx:id="repoArea" editable="false"
+        prefHeight="300" />
+    </GridPane>
+<!--    <children>-->
+<!--        <TabPane layoutX="127.0" layoutY="90.0" prefHeight="400.0" prefWidth="600.0"-->
+<!--                 tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"-->
+<!--                 AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">-->
+<!--            <tabs>-->
+<!--                <Tab text="GitHub User Info">-->
+<!--                    <content>-->
+<!--                        <fx:include fx:id="UserInfo" source="GitHubInfo.fxml" />-->
+<!--                    </content>-->
+<!--                </Tab>-->
+<!--                <Tab text="User Repo Info">-->
+<!--                    <content>-->
+<!--                        <fx:include fx:id="Repos" source="RepoInfo.fxml" />-->
+<!--                    </content></Tab>-->
+<!--            </tabs>-->
+<!--        </TabPane>-->
+<!--    </children>-->
 </AnchorPane>
