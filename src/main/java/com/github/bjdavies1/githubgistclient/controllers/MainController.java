@@ -10,14 +10,20 @@ import com.github.bjdavies1.githubgistclient.caller.APICaller;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class MainController /**implements Initializable**/ {
 
     @FXML
     private TextField userNameArea;
     @FXML
-    private Label NameField;
+    private Label nameField;
     @FXML
-    private Label PublicRepositoriesField;
+    private Label publicRepositoriesField;
 
     private String userName;
     APICaller caller = new APICaller();
@@ -40,8 +46,8 @@ public class MainController /**implements Initializable**/ {
     }
 
     public void displayUserInfo(GithubUser user){
-        NameField.setText(user.getName());
-        PublicRepositoriesField.setText(user.getPublic_repos().toString());
+        nameField.setText(user.getName());
+        publicRepositoriesField.setText(user.getPublic_repos().toString());
     }
 
     public void getPublicRepos(ActionEvent actionEvent) {
@@ -52,16 +58,20 @@ public class MainController /**implements Initializable**/ {
             var statusCode = response.statusCode();
             if(statusCode == 200){
                 Gson gson = new GsonBuilder().create();
-                var repo = gson.fromJson(response.body(), RepoInfo.class);
-                displayRepoInfo(repo);
+                RepoInfo[] repoArray = gson.fromJson(response.body(), (Type) RepoInfo.class);
+                List<RepoInfo> repoList = new ArrayList<>(Arrays.asList(repoArray));
+                displayRepoInfo(repoList);
+
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void displayRepoInfo(RepoInfo repo) {
-
+    private void displayRepoInfo(List repoList) {
+        String repoString = (String) repoList.stream().
+                map(e -> e.toString()).collect(Collectors.joining("\n"));
+        publicRepositoriesField.setText(repoString);
     }
 
 //    private HttpClient client;

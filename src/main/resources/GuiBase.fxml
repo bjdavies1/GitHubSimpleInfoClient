@@ -14,10 +14,10 @@
         </padding>
         <GridPane GridPane.rowIndex="1" GridPane.columnIndex="0">
             <Label fx:id="NameLabel" GridPane.rowIndex="0" GridPane.columnIndex="0" text="Name:"/>
-            <Label fx:id="NameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
             <Label fx:id="RepositoriesLabel" GridPane.rowIndex="1" GridPane.columnIndex="0"
                    text="Public Repositories:"/>
-            <Label fx:id="PublicRepositoriesField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label fx:id="publicRepositoriesField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
         </GridPane>
 
         <GridPane GridPane.rowIndex="0" GridPane.columnIndex="1">
