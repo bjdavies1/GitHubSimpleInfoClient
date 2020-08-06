@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="400.0" prefWidth="900.0"
+            minWidth="-Infinity" prefHeight="500.0" prefWidth="2000.0"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.github.bjdavies1.githubgistclient.controllers.MainController">
     <GridPane alignment="center">

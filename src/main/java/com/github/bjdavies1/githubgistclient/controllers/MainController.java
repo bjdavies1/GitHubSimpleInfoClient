@@ -5,6 +5,7 @@ import com.github.bjdavies1.githubgistclient.models.RepoInfo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import com.github.bjdavies1.githubgistclient.caller.APICaller;
 import com.google.gson.Gson;
@@ -24,6 +25,8 @@ public class MainController /**implements Initializable**/ {
     private Label nameField;
     @FXML
     private Label publicRepositoriesField;
+    @FXML
+    private TextArea repoArea;
 
     private String userName;
     APICaller caller = new APICaller();
@@ -58,7 +61,7 @@ public class MainController /**implements Initializable**/ {
             var statusCode = response.statusCode();
             if(statusCode == 200){
                 Gson gson = new GsonBuilder().create();
-                RepoInfo[] repoArray = gson.fromJson(response.body(), (Type) RepoInfo.class);
+                RepoInfo[] repoArray = gson.fromJson(response.body(), RepoInfo[].class);
                 List<RepoInfo> repoList = new ArrayList<>(Arrays.asList(repoArray));
                 displayRepoInfo(repoList);
 
@@ -71,7 +74,7 @@ public class MainController /**implements Initializable**/ {
     private void displayRepoInfo(List repoList) {
         String repoString = (String) repoList.stream().
                 map(e -> e.toString()).collect(Collectors.joining("\n"));
-        publicRepositoriesField.setText(repoString);
+        repoArea.setText(repoString);
     }
 
 //    private HttpClient client;
