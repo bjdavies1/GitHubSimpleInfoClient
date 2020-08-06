@@ -6,19 +6,19 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="500.0" prefWidth="2000.0"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.github.bjdavies1.githubgistclient.controllers.MainController">
+            fx:controller="com.github.bjdavies1.githubgistclient.controllers.MainController"
+            fx:id="pane">
     <GridPane alignment="center">
         <padding>
             <Insets bottom="10" left="10" right="10" top="10" />
         </padding>
         <GridPane GridPane.rowIndex="1" GridPane.columnIndex="0">
-            <Label fx:id="NameLabel" GridPane.rowIndex="0" GridPane.columnIndex="0" text="Name:"/>
-            <Label fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-            <Label fx:id="RepositoriesLabel" GridPane.rowIndex="1" GridPane.columnIndex="0"
-                   text="Public Repositories:"/>
+            <Label fx:id="companyLabel" GridPane.rowIndex="0" GridPane.columnIndex="0" text="Company: "/>
+            <Label fx:id="companyField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label fx:id="repositoriesLabel" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                   text="Public Repositories: "/>
             <Label fx:id="publicRepositoriesField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
         </GridPane>
-
         <GridPane GridPane.rowIndex="0" GridPane.columnIndex="1">
             <Label fx:id="UserNameInfoLabel" text="GitHub UserName" GridPane.columnIndex="0"
                    GridPane.rowIndex="0" />

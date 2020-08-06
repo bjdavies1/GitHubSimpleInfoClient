@@ -39,7 +39,7 @@ public class GitHubInfoController {
     }
 
     public void displayUserInfo(GithubUser user){
-        NameField.setText(user.getName());
+        NameField.setText(user.getCompany());
         PublicRepositoriesField.setText(user.getPublic_repos().toString());
     }
 }

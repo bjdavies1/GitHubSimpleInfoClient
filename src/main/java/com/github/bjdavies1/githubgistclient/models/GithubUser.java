@@ -1,11 +1,11 @@
 package com.github.bjdavies1.githubgistclient.models;
 
 public class GithubUser {
-    private String name;
+    private String company;
     private Integer public_repos;
 
-    public String getName() {
-        return name;
+    public String getCompany() {
+        return company;
     }
 
     public Integer getPublic_repos() {
@@ -17,7 +17,7 @@ public class GithubUser {
     @Override
     public String toString() {
         return "GithubUser{\n" +
-                "name='" + name + '\'' +
+                "company='" + company + '\'' +
                 ",\npublic_repos='" + public_repos +'\'' +
                 '}';
     }

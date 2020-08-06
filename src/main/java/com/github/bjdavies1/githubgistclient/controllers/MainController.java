@@ -10,8 +10,8 @@ import javafx.scene.control.TextField;
 import com.github.bjdavies1.githubgistclient.caller.APICaller;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import javafx.scene.layout.AnchorPane;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,11 +22,13 @@ public class MainController /**implements Initializable**/ {
     @FXML
     private TextField userNameArea;
     @FXML
-    private Label nameField;
+    private Label companyField;
     @FXML
     private Label publicRepositoriesField;
     @FXML
     private TextArea repoArea;
+    @FXML
+    private AnchorPane pane;
 
     private String userName;
     APICaller caller = new APICaller();
@@ -49,7 +51,11 @@ public class MainController /**implements Initializable**/ {
     }
 
     public void displayUserInfo(GithubUser user){
-        nameField.setText(user.getName());
+        if(user.getCompany() == null){
+            companyField.setText("They have no company listed");
+        } else {
+            companyField.setText(user.getCompany());
+        }
         publicRepositoriesField.setText(user.getPublic_repos().toString());
     }
 
