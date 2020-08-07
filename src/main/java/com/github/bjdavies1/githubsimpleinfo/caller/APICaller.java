@@ -1,4 +1,4 @@
-package com.github.bjdavies1.githubgistclient.caller;
+package com.github.bjdavies1.githubsimpleinfo.caller;
 
 import java.net.URI;
 import java.net.http.HttpClient;

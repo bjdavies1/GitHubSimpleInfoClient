@@ -6,7 +6,7 @@
 
 <VBox fx:id="loggerTab" prefHeight="444.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.github.bjdavies1.githubgistclient.controllers.RepoInfoController">
+      fx:controller="com.github.bjdavies1.githubsimpleinfo.controllers.RepoInfoController">
     <padding>
         <Insets bottom="10" left="10" right="10" top="10" />
     </padding>

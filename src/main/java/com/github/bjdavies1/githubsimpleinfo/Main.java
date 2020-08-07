@@ -1,4 +1,4 @@
-package com.github.bjdavies1.githubgistclient;
+package com.github.bjdavies1.githubsimpleinfo;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,8 +11,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("GuiBase.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 700, 275));
+        primaryStage.setTitle("Github small user info");
+        primaryStage.setScene(new Scene(root, 900, 400));
         primaryStage.show();
     }
 

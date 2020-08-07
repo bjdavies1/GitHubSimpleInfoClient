@@ -5,6 +5,6 @@ module GitHubSimpleInfoClient {
     requires java.net.http;
     requires com.google.gson;
 
-    opens com.github.bjdavies1.githubgistclient;
-    opens com.github.bjdavies1.githubgistclient.controllers;
+    opens com.github.bjdavies1.githubsimpleinfo;
+    opens com.github.bjdavies1.githubsimpleinfo.controllers;
 }

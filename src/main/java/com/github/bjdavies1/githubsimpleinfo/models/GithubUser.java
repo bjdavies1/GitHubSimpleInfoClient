@@ -1,4 +1,4 @@
-package com.github.bjdavies1.githubgistclient.models;
+package com.github.bjdavies1.githubsimpleinfo.models;
 
 public class GithubUser {
     private String company;

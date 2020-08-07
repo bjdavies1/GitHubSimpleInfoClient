@@ -1,4 +1,4 @@
-package com.github.bjdavies1.githubgistclient.models;
+package com.github.bjdavies1.githubsimpleinfo.models;
 
 public class RepoInfo {
 
@@ -10,9 +10,6 @@ public class RepoInfo {
 
         @Override
         public String toString() {
-            return "html: " + html_url;
+            return html_url;
         }
-
-
 }
-

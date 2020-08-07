@@ -1,17 +1,15 @@
-package com.github.bjdavies1.githubgistclient.controllers;
+package com.github.bjdavies1.githubsimpleinfo.controllers;
 
-import com.github.bjdavies1.githubgistclient.models.GithubUser;
-import com.github.bjdavies1.githubgistclient.models.RepoInfo;
+import com.github.bjdavies1.githubsimpleinfo.models.GithubUser;
+import com.github.bjdavies1.githubsimpleinfo.models.RepoInfo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import com.github.bjdavies1.githubgistclient.caller.APICaller;
+import com.github.bjdavies1.githubsimpleinfo.caller.APICaller;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import javafx.scene.layout.AnchorPane;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,14 +25,11 @@ public class MainController /**implements Initializable**/ {
     private Label publicRepositoriesField;
     @FXML
     private TextArea repoArea;
-    @FXML
-    private AnchorPane pane;
 
     private String userName;
     APICaller caller = new APICaller();
 
     public void getUserInfo(ActionEvent actionEvent) {
-//        System.out.println(userNameArea.getText());
         userName = userNameArea.getText().toString();
         caller.setURI("users/" + userName);
         try {
@@ -82,11 +77,4 @@ public class MainController /**implements Initializable**/ {
                 map(e -> e.toString()).collect(Collectors.joining("\n"));
         repoArea.setText(repoString);
     }
-
-//    private HttpClient client;
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//        client = HttpClient.newHttpClient();
-//    }
-
 }
